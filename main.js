@@ -106,8 +106,21 @@ console.log(Object.entries(tenAlbum))
 // .values()
 // .entries()
 
-for (const item in tenAlbum) {
-    
+for (const key of Object.keys(tenAlbum)){
+    console.log("Object.keys()", `${key}: ${tenAlbum[key]}`)
+}
+
+for (const value of Object.values(tenAlbum)) {
+    const key = Object.keys(tenAlbum).find(key => tenAlbum[key] === value)
+    console.log("object.values()", `${key}: ${value}`)
+}
+
+for (const entry of Object.entries(tenAlbum)) {
+    console.log("Object.entries()", `Key: ${entry[0]} - Value: ${entry[1]}`)
+}
+
+for (const [key, properties] of Object.entries(tenAlbum)) {
+    console.log("Object.entries()", `${key}: ${properties}`)
 }
 
 
