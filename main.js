@@ -60,14 +60,14 @@ const tenAlbum = {
 console.log(`${tenAlbum.artist}'s Album ${tenAlbum.title} was released on ${tenAlbum.released}`)
 
 // TODO: Output the same messge to the console using BRACKET NOTATION
-console.log(`${tenAlbum[artist]}'s Album ${tenAlbum[title]} was released on ${tenAlbum[released]}`)
+console.log(`${tenAlbum['artist']}'s Album ${tenAlbum['title']} was released on ${tenAlbum['released']}`)
 
 // Iterating Object keys/values
 // TODO: Iterate the tenAlbum object and log the key/value pairs to the console using a for/in loop
 // example: "title": "Ten"
 
 for (const currentKey in tenAlbum) {
-    console.log(currentKey: tenAlbum.currentKey)
+    console.log(`${currentKey}: ${tenAlbum[currentKey]}`)
 }
 
 // Accessing iterable properties on objects
@@ -77,10 +77,15 @@ for (const currentKey in tenAlbum) {
     Title: Even Flow - Length: 293
     etc.
 */
-for (const song in tenAlbum.tracks) {
-    console.log(`Title: ${song.title} - Length: ${song.length}`)
-}
 
+// For in loop:
+for (const item in tenAlbum.tracks) {
+    console.log(`Title: ${tenAlbum.tracks[item].title} - Length: ${tenAlbum.tracks[item].length}`)
+}
+// For of loop:
+for (const item of tenAlbum.tracks) {
+    console.log(`Title: ${item.title} - Length: ${item.length}`)
+}
 
 // ! ADD AND COMMIT
 
