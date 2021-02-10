@@ -106,7 +106,9 @@ console.log(Object.entries(tenAlbum))
 // .values()
 // .entries()
 
-
+for (const item in tenAlbum) {
+    
+}
 
 
 
